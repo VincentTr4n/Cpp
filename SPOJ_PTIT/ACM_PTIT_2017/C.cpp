@@ -20,8 +20,24 @@ using namespace std;
 
 
 int main() {
-	
-	
+	int t;
+	cin>>t;
+	while(t--){
+		string s;
+		cin>>s;
+		bool ok = 1;
+		rep(i,len(s)){
+			if(i%2==0 && (s[i]-'0')%2==0){
+				ok = 0;
+				break;
+			}
+			else if(i%2!=0 && (s[i]-'0')%2!=0){
+				ok = 0;
+				break;
+			}
+		}
+		print(ok?"YES":"NO");
+	}
 	return 0;
 }
 

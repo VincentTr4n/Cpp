@@ -20,8 +20,18 @@ using namespace std;
 
 
 int main() {
-	
-	
+	int t;
+	cin>>t;
+	while(t--){
+		string s;
+		cin>>s;
+		char c = s[0];
+		switch (c){
+			case 'l': cin>>s; print(1);
+			case 'd': print(2);
+			case 'n': cin>>s; print(3);
+		}
+	}
 	return 0;
 }
 

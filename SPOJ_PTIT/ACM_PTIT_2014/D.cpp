@@ -18,10 +18,26 @@
 using namespace std;
 
 
+bool solve(string s){
+	int sum = 0;
+	if(len(s)==1){
+		if(s=="9") return true;
+		else return false;
+	}
+	rep(i,len(s)) sum+=s[i] - '0';
+	if(sum==9) return true;
+	else return solve(to_string(sum));
+}
+
 
 int main() {
-	
-	
+	int t,n;
+	cin>>t;
+	while(t--){
+		string s;
+		cin>>s;
+		print(solve(s));
+	}
 	return 0;
 }
 

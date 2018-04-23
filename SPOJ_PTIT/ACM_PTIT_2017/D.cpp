@@ -17,11 +17,21 @@
 #define print(x) cout<<(x)<<endl
 using namespace std;
 
+int a[100006];
 
+bool cmp(int x,int y){
+	return x > y;
+}
 
 int main() {
-	
-	
+	int n,k;
+	cin>>n>>k;
+	rep(i,n) cin>>a[i];
+	sort(a, a+n, cmp);
+	ll res = 0;
+	for(int i=0;i<=k;i++) res += a[i];
+	for(int i=k+1;i<n;i++) res -= a[i];
+	print(res);
 	return 0;
 }
 

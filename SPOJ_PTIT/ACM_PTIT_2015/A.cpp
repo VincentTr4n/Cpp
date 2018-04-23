@@ -17,11 +17,21 @@
 #define print(x) cout<<(x)<<endl
 using namespace std;
 
+int arr[10];
 
 
 int main() {
-	
-	
+	int t;
+	cin>>t;
+	string a,b,c;
+	while(t--){
+		cin>>a>>b>>c;
+		string s = a + b + c;
+		memset(arr,0,sizeof(arr));
+		rep(i,len(s)) arr[s[i] - '0']++;
+		ford(i,10) while(arr[i]) cout<<i,arr[i]--;
+		print("");
+	}
 	return 0;
 }
 

@@ -15,13 +15,25 @@
 #define add push_back
 #define len(arr) arr.size()
 #define print(x) cout<<(x)<<endl
+#include <stack>
 using namespace std;
 
 
 
 int main() {
-	
-	
+	int t;
+	cin>>t;
+	while(t--){
+		int n, m, x, sum = 0, cnt = 0;
+		cin>>n>>m;
+		rep(i,n){
+			cin>>x;
+			sum+=x;
+			if(sum <= m) cnt++;
+		}
+		print(cnt);
+		
+	}
 	return 0;
 }
 

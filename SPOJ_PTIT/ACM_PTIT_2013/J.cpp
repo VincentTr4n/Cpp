@@ -20,8 +20,14 @@ using namespace std;
 
 
 int main() {
-	
-	
+	int t;
+	cin>>t;
+	while(t--){
+		string s;
+		cin>>s;
+		int n = len(s);
+		print(s[n-1]=='6' && s[n-2]=='8');
+	}
 	return 0;
 }
 

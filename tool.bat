@@ -1,0 +1,1 @@
+del *.exe /P /F /S

@@ -18,10 +18,28 @@
 using namespace std;
 
 
+ll factorial(int x){
+	ll res = 1;
+	for(int i=1;i<=x;i++) res*=i;
+	return res;
+}
+
 
 int main() {
-	
-	
+	int t;
+	cin>>t;
+	ll n;
+	while(t--){
+		cin>>n;
+		ll res = 0;
+		int i = 1;
+		while(n>0){
+			res+=factorial(i)*(n%10);
+			i++;
+			n/=10;
+		}
+		print(res);
+	}
 	return 0;
 }
 

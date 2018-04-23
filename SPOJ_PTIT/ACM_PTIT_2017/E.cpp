@@ -17,11 +17,24 @@
 #define print(x) cout<<(x)<<endl
 using namespace std;
 
+#define N 1000007
 
+ll a[104][12];
 
 int main() {
+	int n;
+	cin>>n;
+	rep(i,n) rep(j,11) cin>>a[i][j];
 	
-	
+	ll res = -11091997;
+	for(int i=0;i<n;i++)
+	for(int j=i+1;j<n;j++)
+	for(int k=j+1;k<n;k++){
+		ll sum = 0;
+		rep(t,11) sum += max(a[i][t], max(a[j][t],a[k][t]));
+		res = max(res,sum);
+	}
+	print(res);
 	return 0;
 }
 

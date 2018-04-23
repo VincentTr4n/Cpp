@@ -5,9 +5,9 @@
 #define ford(i,n) FORD(i,n-1,0)
 #define sqr(x) ((x)*(x))
 #define ll long long
-#define ii pair<int,int>
+#define pi pair<int,int>
 #define vi vector<int>
-#define vii vector<ii>
+#define vpi vector<pi>
 #define vll vector<ll>
 #define fi first
 #define se second
@@ -20,7 +20,19 @@ using namespace std;
 
 
 int main() {
-	
+	freopen("in.txt","r",stdin);
+	int t;
+	cin >> t;
+	while(t--){
+		string s;
+		cin >> s;
+		int n = len(s);
+		int a[26] = {};
+		rep(i, n) a[s[i] - 'a']++;
+		int cnt = 0;
+		rep(i,26) if(a[i]%2 != 0) cnt++;
+		puts((cnt < 4 ? "YES" : "NO"));
+	}
 	
 	return 0;
 }

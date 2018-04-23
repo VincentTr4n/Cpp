@@ -17,11 +17,16 @@
 #define print(x) cout<<(x)<<endl
 using namespace std;
 
-
+int a[1004][1004];
 
 int main() {
-	
-	
+	int t;
+	cin>>t;
+	while(t--){
+		int n, m;
+		cin>>n>>m;
+		rep()
+	}
 	return 0;
 }
 

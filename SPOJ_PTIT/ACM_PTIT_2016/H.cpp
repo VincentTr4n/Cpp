@@ -18,10 +18,35 @@
 using namespace std;
 
 
+string solve(int n){
+	string res = "";
+	REP(i,1,n) res+=to_string(i);
+	bool even = 1;
+	while(len(res)!=1){
+		string tmp = "";
+		if(even){
+			for(int i=0;i<len(res);i+=2) tmp+=res[i];
+			res = tmp;
+			even = 0;
+		}
+		else{
+			for(int i=1;i<len(res);i+=2) tmp+=res[i];
+			res = tmp;
+			even = 1;
+		}
+		//print(res);
+	}
+	return res;
+}
+
 
 int main() {
-	
-	
+	int t,n;
+	cin>>t;
+	while(t--){
+		cin >> n;
+		print(solve(n));
+	}
 	return 0;
 }
 

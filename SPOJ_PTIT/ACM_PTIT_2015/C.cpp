@@ -20,8 +20,12 @@ using namespace std;
 
 
 int main() {
-	
-	
+	int t;
+	ll xa,ya,xb,yb;
+	cin>>t;
+	while(t--){
+		
+	}
 	return 0;
 }
 

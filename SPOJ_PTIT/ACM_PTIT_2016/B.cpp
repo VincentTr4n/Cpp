@@ -17,11 +17,20 @@
 #define print(x) cout<<(x)<<endl
 using namespace std;
 
+int a[1005][1005];
 
 
 int main() {
-	
-	
+	int t;
+	cin>>t;
+	while(t--){
+		int n, m;
+		cin>>n>>m;
+		rep(i,n) rep(j,m){
+			cin>>a[i][j];
+			
+		}
+	}
 	return 0;
 }
 

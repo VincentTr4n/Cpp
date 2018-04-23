@@ -17,11 +17,27 @@
 #define print(x) cout<<(x)<<endl
 using namespace std;
 
+int a[10][10];
+int b[10];
 
 
 int main() {
-	
-	
+	int t,n;
+	cin >> t;
+	while(t--){
+		cin >> n;
+		rep(i, n) rep(j, n) cin >> a[i][j];
+		rep(i, n) b[i] = i;
+		ll res = 1e18;
+		for(;;){
+			ll sum = 0;
+			rep(i,n) sum += a[i][b[i]];
+			res = min(sum, res);
+			
+			if(!next_permutation(b, b + n)) break;
+		}
+		print(res);
+	}
 	return 0;
 }
 

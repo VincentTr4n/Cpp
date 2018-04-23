@@ -17,11 +17,20 @@
 #define print(x) cout<<(x)<<endl
 using namespace std;
 
-
+ll d(ll xa,ll ya,ll xb,ll yb)
+{
+	return sqrt( (xa-xb)*(xa-xb) + (ya-yb)*(ya-yb) );
+}
 
 int main() {
-	
-	
+	int t;
+	ll xa,ya,xb,yb;
+	cin>>t;
+	while(t--){
+		cin>>xa>>ya>>xb>>yb;
+		if((ya>0 && yb>0) || (ya<0 && yb<0)) print(d(xa,-ya,xb,yb));
+		else print(d(xa,ya,xb,yb));
+	}
 	return 0;
 }
 

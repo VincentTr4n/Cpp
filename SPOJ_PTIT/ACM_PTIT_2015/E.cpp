@@ -17,11 +17,29 @@
 #define print(x) cout<<(x)<<endl
 using namespace std;
 
+#define N 1000007
+
+ll a[N];
+ll b[N];
+
+void init(){
+	for(int i=1;i<N;i++)
+	for(int j=i;j<N;j+=i) a[j]+=i,b[j]++;
+	for(int i=1;i<N;i++) a[i]+=a[i-1],b[i]+=b[i-1];
+}
+
 
 
 int main() {
-	
-	
+	init();
+	int t;
+	cin>>t;
+	while(t--){
+		int x,y;
+		cin>>x>>y;
+		cout << (b[y]-b[x-1]) << " " << (a[y]-a[x-1]);
+		cout << '\n';
+	}
 	return 0;
 }
 

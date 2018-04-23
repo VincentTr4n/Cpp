@@ -17,11 +17,21 @@
 #define print(x) cout<<(x)<<endl
 using namespace std;
 
+int mod36(string num){
+	int res = 0;
+	rep(i,len(num)) res = (res*10 + num[i] - '0') % 36;
+	return res;
+}
 
 
 int main() {
-	
-	
+	int t;
+	cin>>t;
+	while(t--){
+		string s;
+		cin>>s;
+		print(mod36(s)==0?"YES":"NO");
+	}
 	return 0;
 }
 
