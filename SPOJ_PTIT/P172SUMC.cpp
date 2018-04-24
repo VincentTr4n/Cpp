@@ -17,19 +17,14 @@
 #define print(x) cout<<(x)<<endl
 using namespace std;
 
-#define N 1000007
 
-int a[N];
 
 int main() {
-	freopen("in.txt","r",stdin);
-	
-	int n, x, m;
-	cin >> m >> n;
-	rep(i, n) cin >> a[i];
-	
-	
-	
+//	freopen("in.txt","r",stdin);
+	int a[4] = {6, 8, 4, 2};
+	ll n;
+	cin >> n;
+	print(a[n%4]);
 	
 	return 0;
 }
