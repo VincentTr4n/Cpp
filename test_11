@@ -1,11 +1,2 @@
 #include<stdio.h>
-char s[100],c,i,t=1;
-int main(){
-	gets(s);
-	while(gets(s))
-	{
-		printf("#%d",t++);
-		for(i=0;c=s[i++],c-=c>73;)if(c>64)printf(" %d",c*2-c%5-119);
-		puts("");
-	}
-}
+char s[100],c,i,t=1;int main(){gets(s);while(gets(s)){printf("#%d",t++);for(i=0;c=s[i++],c-=c>73;)if(c>64)printf(" %d",c*2-c%5-119);puts("");}}
