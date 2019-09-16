@@ -1,2 +1,2 @@
 #include<stdio.h>
-int i,t=1;char s[40],c;int main(){gets(s);while(gets(s)){printf("#%d",t++);for(i=0;c=s[i];++i){c-=c>73;if(c>64)printf(" %d",c*2-c%5-119);}puts("");}}
+int i,t=1;char s[0],c;int main(){gets(s);while(gets(s)){printf("#%d",t++);for(i=0;c=s[i];++i){c-=c>73;if(c>64)printf(" %d",c*2-c%5-119);}puts("");}}
